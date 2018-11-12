@@ -37,6 +37,8 @@ public class StoreController : MonoBehaviour {
         foreach (Purchasable purchasablePrefab in sidePrefabs) {
             Purchasable purchasable = Instantiate<Purchasable>(purchasablePrefab);
             purchasable.Target = target;
+            purchasable.Game = game;
+
             sideItems.Add(purchasable);
         }
     }
